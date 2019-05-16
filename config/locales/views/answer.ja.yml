@@ -1,0 +1,8 @@
+ja:
+  answers:
+    index:
+      title: '回答一覧'
+    show:
+      title: '回答参照'
+    edit:
+      title: '回答編集'

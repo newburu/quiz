@@ -1,0 +1,8 @@
+ja:
+  questions:
+    index:
+      title: '問題一覧'
+    show:
+      title: '問題参照'
+    edit:
+      title: '問題編集'

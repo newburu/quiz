@@ -1,12 +1,12 @@
-h1 Listing questions
+h1 = t('.title')
 
 table
   thead
     tr
-      th Category1
-      th Category2
-      th Category3
-      th Msg
+      th = t('activerecord.attributes.question.category1')
+      th = Question.human_attribute_name(:category2)
+      th = Question.human_attribute_name(:category3)
+      th = Question.human_attribute_name(:msg)
       th
       th
       th
@@ -18,10 +18,10 @@ table
         td = question.category2
         td = question.category3
         td = question.msg
-        td = link_to 'Show', question
-        td = link_to 'Edit', edit_question_path(question)
-        td = link_to 'Destroy', question, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to t('btn.show'), question
+        td = link_to t('btn.edit'), edit_question_path(question)
+        td = link_to t('btn.destroy'), question, data: { confirm: t('confirm.destroy') }, method: :delete
 
 br
 
-= link_to 'New Question', new_question_path
+= link_to t('btn.new'), new_question_path

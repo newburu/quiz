@@ -1,18 +1,18 @@
 p#notice = notice
 
 p
-  strong Category1:
+  strong = "#{Question.human_attribute_name(:category1)}:"
   = @question.category1
 p
-  strong Category2:
+  strong = "#{Question.human_attribute_name(:category2)}:"
   = @question.category2
 p
-  strong Category3:
+  strong = "#{Question.human_attribute_name(:category3)}:"
   = @question.category3
 p
-  strong Msg:
+  strong = "#{Question.human_attribute_name(:msg)}:"
   = @question.msg
 
-=> link_to 'Edit', edit_question_path(@question)
+=> link_to t('btn.edit'), edit_question_path(@question)
 '|
-=< link_to 'Back', questions_path
+=< link_to t('btn.back'), questions_path

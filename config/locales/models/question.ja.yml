@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      question: '問題'
+    attributes:
+        question:
+          id: 'ID'
+          category1: 'カテゴリ１'
+          category2: 'カテゴリ２'
+          category3: 'カテゴリ３'
+          msg: '問題文'
+          created_at: '作成日'
+          updated_at: '更新日'
+
