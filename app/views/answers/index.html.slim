@@ -1,0 +1,25 @@
+h1 Listing answers
+
+table
+  thead
+    tr
+      th Question
+      th Msg
+      th Correct
+      th
+      th
+      th
+
+  tbody
+    - @answers.each do |answer|
+      tr
+        td = answer.question
+        td = answer.msg
+        td = answer.correct
+        td = link_to 'Show', answer
+        td = link_to 'Edit', edit_answer_path(answer)
+        td = link_to 'Destroy', answer, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Answer', new_answer_path

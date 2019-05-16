@@ -1,0 +1,27 @@
+h1 Listing questions
+
+table
+  thead
+    tr
+      th Category1
+      th Category2
+      th Category3
+      th Msg
+      th
+      th
+      th
+
+  tbody
+    - @questions.each do |question|
+      tr
+        td = question.category1
+        td = question.category2
+        td = question.category3
+        td = question.msg
+        td = link_to 'Show', question
+        td = link_to 'Edit', edit_question_path(question)
+        td = link_to 'Destroy', question, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Question', new_question_path
