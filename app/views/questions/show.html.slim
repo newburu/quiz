@@ -13,6 +13,18 @@ p
   strong = "#{Question.human_attribute_name(:msg)}:"
   = @question.msg
 
+// ここに回答一覧を足します。
+p
+  strong = "#{Question.human_attribute_name(:answers)}:"
+  // 問題の子供として、has_manyしているanswersでループ(each)します。そして、その値(回答モデル)はanswerに渡します。
+  - @question.answers.each do |answer|
+    p
+      strong = "#{Answer.human_attribute_name(:msg)}:"
+      = answer.msg
+    p
+      strong = "#{Answer.human_attribute_name(:correct)}:"
+      = answer.correct
+
 => link_to t('btn.edit'), edit_question_path(@question)
 '|
 =< link_to t('btn.back'), questions_path

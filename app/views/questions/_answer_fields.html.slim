@@ -1,0 +1,9 @@
+.nested-fields
+  .field
+    = f.label :msg
+    = f.text_area :msg
+  .field
+    = f.label :correct
+    = f.check_box :correct
+
+  = link_to_remove_association "削除", f

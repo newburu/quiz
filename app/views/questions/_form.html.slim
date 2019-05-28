@@ -18,4 +18,10 @@
   .field
     = f.label :msg
     = f.text_area :msg
+
+  .answers
+    = f.fields_for :answers do |answer|
+      = render 'answer_fields', f: answer
+    = link_to_add_association "追加", f, :answers
+
   .actions = f.submit

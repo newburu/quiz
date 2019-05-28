@@ -66,3 +66,9 @@ gem 'slim-rails'
 
 # i18n
 gem 'rails-i18n'
+
+# 親子関係
+gem 'cocoon'
+
+# jQuery
+gem 'jquery-rails'
