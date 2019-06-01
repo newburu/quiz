@@ -72,3 +72,6 @@ gem 'cocoon'
 
 # jQuery
 gem 'jquery-rails'
+
+# JSON
+gem 'jbuilder', '~> 2.5'

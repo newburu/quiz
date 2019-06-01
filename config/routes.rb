@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   resources :answers
   resources :questions
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  # API用(JSONを返すため、formatを指定する)
+  namespace :api, { format: 'json' } do
+    namespace :v1 do # APIのため、バージョンを意識して作る
+      get 'questions/:id', to: 'questions#show'
+    end
+  end
 end
