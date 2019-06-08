@@ -77,7 +77,15 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     erubi (1.8.0)
+    eventmachine (1.2.7)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.1)
+      faraday (>= 0.7.4, < 1.0)
+    faye-websocket (0.10.7)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
     ffi (1.10.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -107,6 +115,8 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.10)
+    multi_json (1.13.1)
+    multipart-post (2.1.1)
     mysql2 (0.5.2)
     nio4r (2.3.1)
     nokogiri (1.10.3)
@@ -164,6 +174,11 @@ GEM
     selenium-webdriver (3.142.2)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
+    slack-api (1.6.1)
+      faraday (~> 0.11)
+      faraday_middleware (~> 0.10.0)
+      faye-websocket (~> 0.10.6)
+      multi_json (~> 1.0, >= 1.0.3)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -224,6 +239,7 @@ DEPENDENCIES
   rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  slack-api
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
