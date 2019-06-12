@@ -12,6 +12,6 @@ namespace :slack_bot do
     msg = "【問題】\n#{question.msg}\n\nア　#{question.answers[0].msg}\nイ　#{question.answers[1].msg}\nウ　#{question.answers[2].msg}\nエ　#{question.answers[3].msg}\n\n#{source}"
 
     # text:出力テキスト、channel:出力先のチャンネル名、username:表示ユーザ名
-    Slack.chat_postMessage(text: msg, channel: 'times_にゅーぶる', username: 'FE問題_出題BOT')
+    Slack.chat_postMessage(text: msg, channel: ENV["SLACK_CHANNEL_NAME"], username: ENV["SLACK_BOT_NAME"])
   end
 end
