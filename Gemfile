@@ -78,3 +78,6 @@ gem 'jbuilder', '~> 2.5'
 
 # SlackAPI
 gem 'slack-api'
+
+# スクレイピング
+gem 'nokogiri'
