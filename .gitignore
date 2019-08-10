@@ -26,3 +26,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 lib/tasks/get_questions.sh
+lib/tasks/get_questions_heroku.sh
